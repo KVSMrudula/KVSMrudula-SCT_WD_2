@@ -1,0 +1,96 @@
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    display: flex;
+    background: url("https://img.freepik.com/free-vector/brown-wallpaper-with-retro-watch-design_1308-18196.jpg?w=996&t=st=1726232430~exp=1726233030~hmac=4c76951d1db720b8b34b9a61c4d28d69206d61ad0647c5e05cd2c4cfebf874fc") no-repeat center center/cover;
+ 
+    justify-content: flex-end;
+    margin-right: 300px;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+}
+
+.stopwatch-container {
+
+    
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 0px 15px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 500px;
+}
+
+h1 {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #0f0f0b;
+}
+
+.time-display {
+    font-size: 40px;
+    margin-bottom: 20px;
+    color: #007bff;
+}
+
+.controls {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+button {
+    flex: 1; 
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: white;
+    transition: background-color 0.3s;
+}
+
+button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+
+button:hover:not(:disabled) {
+    background-color: #0056b3;
+}
+
+.laps {
+    list-style-type: none;
+    padding: 0;
+}
+
+.laps li {
+    font-size: 18px;
+    margin-bottom: 5px;
+    color: #333;
+}
+
+
+@media screen and (max-width: 400px) {
+    .stopwatch-container {
+        width: 100%;
+        padding: 10px;
+    }
+
+    .time-display {
+        font-size: 30px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 8px 10px;
+    }
+}
